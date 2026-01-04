@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon compte Scratch</title>
+  <style>
+    :root {
+      --blue-dark: #0b1d33;
+      --blue-card: #132f4c;
+      --blue-accent: #4da3ff;
+      --text-main: #e6f0ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, var(--blue-dark), #081426);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid var(--blue-accent);
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    main {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card.top {
+        aspect-ratio: 1 / 1;
+        max-width: 200px;
+        justify-self: center;
+    }
+
+    .card.bottom {
+        width: 482px;
+        height: 412px;
+        justify-self: center;
+        grid-column: 1 / -1;
+    }
+
+    .card.top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .card a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #081426;
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      opacity: 0.6;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pfp.png" alt="Photo de profil Scratch" />
+    <h1>ValiX</h1>
+  </header>
+
+  <main>
+    <div class="grid">
+      <div class="card top">
+        <a href="https://scratch.mit.edu/users/_-ValX-_" target="_blank">
+          <img src="scratch.png" alt="Projet 1" />
+        </a>
+      </div>
+
+      <div class="card top">
+        <a href="https://www.youtube.com/@valxscr" target="_blank">
+            <img src="ytb.png" alt="Projet 2" />
+        </a>
+      </div>
+      <h1>Projet récent :</h1>
+      <div class="card bottom">
+        <iframe src="https://scratch.mit.edu/projects/1231094109/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 • Page Scratch personnelle
+  </footer>
+
+</body>
+</html>
